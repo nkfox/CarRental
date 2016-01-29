@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This command change order. Shows all info about order, its rent and payments
+ * This command change order. Shows all info about order, its rent and payments. new version
  * Created by Nataliia Kozoriz on 26.01.2016.
  */
 public class ChangeOrderCommand implements Command {
@@ -46,7 +46,7 @@ public class ChangeOrderCommand implements Command {
             logger.error("DBError", ex);
         }
 
-        if (order!=null) {
+        if (order != null) {
             List<Payment> payments = new ArrayList<>();
             List<PaymentName> paymentNames = new ArrayList<>();
             PaymentDAO paymentDao = factory.getPaymentDAO();
@@ -77,8 +77,7 @@ public class ChangeOrderCommand implements Command {
             session.setAttribute("rentStatuses", rentStatuses);
 
             return "/jsp/adminPages/changeOrder.jsp";
-        }
-        else{
+        } else {
             return "/jsp/adminPages/orders.jsp";
         }
     }
