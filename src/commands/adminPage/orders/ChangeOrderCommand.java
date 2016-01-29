@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * This command change order. Shows all info about order, its rent and payments. new version
+ * This command change order. Shows all info about order, its rent and payments.
  * Created by Nataliia Kozoriz on 26.01.2016.
  */
 public class ChangeOrderCommand implements Command {
