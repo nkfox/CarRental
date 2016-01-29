@@ -1,0 +1,168 @@
+23:54:03.243 [http-apr-8080-exec-9] ERROR LoginCommand:34 - DBError
+java.lang.NullPointerException
+	at commands.personalPage.LoginCommand.execute(LoginCommand.java:32)
+	at controllers.Handler.processRequest(Handler.java:24)
+	at controllers.Handler.doPost(Handler.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at filter.EncodingFilter.doFilter(EncodingFilter.java:14)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2500)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2489)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:724)
+23:54:03.270 [http-apr-8080-exec-9] ERROR LoginCommand:41 - DBError
+java.lang.NullPointerException
+	at commands.personalPage.LoginCommand.execute(LoginCommand.java:39)
+	at controllers.Handler.processRequest(Handler.java:24)
+	at controllers.Handler.doPost(Handler.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at filter.EncodingFilter.doFilter(EncodingFilter.java:14)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2500)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2489)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:724)
+23:54:15.284 [http-apr-8080-exec-10] ERROR LoginCommand:34 - DBError
+java.lang.NullPointerException
+	at commands.personalPage.LoginCommand.execute(LoginCommand.java:32)
+	at controllers.Handler.processRequest(Handler.java:24)
+	at controllers.Handler.doPost(Handler.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at filter.EncodingFilter.doFilter(EncodingFilter.java:14)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2500)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2489)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:724)
+23:54:15.302 [http-apr-8080-exec-10] ERROR LoginCommand:41 - DBError
+java.lang.NullPointerException
+	at commands.personalPage.LoginCommand.execute(LoginCommand.java:39)
+	at controllers.Handler.processRequest(Handler.java:24)
+	at controllers.Handler.doPost(Handler.java:48)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:648)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at filter.EncodingFilter.doFilter(EncodingFilter.java:14)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:212)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:141)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:616)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:521)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1096)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:674)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.doRun(AprEndpoint.java:2500)
+	at org.apache.tomcat.util.net.AprEndpoint$SocketProcessor.run(AprEndpoint.java:2489)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:724)
+11:24:26.296 [http-apr-8080-exec-2] INFO  CheckAuthFilter:32 - Page is not valid
+11:24:27.819 [http-apr-8080-exec-4] INFO  CheckAuthFilter:32 - Page is not valid
+11:24:30.602 [http-apr-8080-exec-6] INFO  CheckAuthFilter:32 - Page is not valid
+11:27:28.896 [http-apr-8080-exec-2] INFO  CheckAuthFilter:34 - Page is not valid
+11:27:30.669 [http-apr-8080-exec-4] INFO  CheckAuthFilter:34 - Page is not valid
+11:27:41.062 [http-apr-8080-exec-6] INFO  CheckAuthFilter:34 - Page is not valid
+11:28:01.028 [http-apr-8080-exec-9] INFO  CheckAuthFilter:34 - Page is not valid
+11:30:19.758 [http-apr-8080-exec-2] INFO  CheckAuthFilter:34 - //jsp/index.jsp - Page is not valid
+11:30:21.155 [http-apr-8080-exec-4] INFO  CheckAuthFilter:34 - //jsp/index.jsp - Page is not valid
+11:30:24.713 [http-apr-8080-exec-6] INFO  CheckAuthFilter:34 - //jsp/index.jsp - Page is not valid
+11:30:33.913 [http-apr-8080-exec-9] INFO  CheckAuthFilter:34 - /jsp/handler - Page is not valid
+11:33:38.520 [http-apr-8080-exec-13] INFO  CheckAuthFilter:34 - /jsp/handler - Page is not valid
+11:33:54.476 [http-apr-8080-exec-15] INFO  CheckAuthFilter:34 - /jsp/clientPage.jsp - Page is not valid
+11:35:54.339 [http-apr-8080-exec-2] INFO  CheckAuthFilter:35 - //jsp/index.jsp - Page is not valid
+11:35:55.858 [http-apr-8080-exec-4] INFO  CheckAuthFilter:35 - //jsp/index.jsp - Page is not valid
+11:35:58.752 [http-apr-8080-exec-6] INFO  CheckAuthFilter:35 - //jsp/index.jsp - Page is not valid
+11:36:19.813 [http-apr-8080-exec-9] INFO  CheckAuthFilter:35 - /jsp/handler - Page is not valid
+11:37:42.678 [http-apr-8080-exec-2] INFO  CheckAuthFilter:35 - //jsp/index.jsp - Page is not valid
+11:37:44.073 [http-apr-8080-exec-4] INFO  CheckAuthFilter:35 - //jsp/index.jsp - Page is not valid
+11:37:46.193 [http-apr-8080-exec-6] INFO  CheckAuthFilter:35 - //jsp/index.jsp - Page is not valid
+11:39:06.430 [http-apr-8080-exec-2] INFO  CheckAuthFilter:35 - //jsp/index.jsp - Page is not valid
+11:39:07.907 [http-apr-8080-exec-4] INFO  CheckAuthFilter:35 - //jsp/index.jsp - Page is not valid
+11:39:10.087 [http-apr-8080-exec-6] INFO  CheckAuthFilter:35 - //jsp/index.jsp - Page is not valid
+11:39:42.058 [http-apr-8080-exec-11] INFO  CheckAuthFilter:35 - /jsp/personalPage.jsp - Page is not valid
+11:40:47.716 [http-apr-8080-exec-16] INFO  CheckAuthFilter:35 - /jsp/adminPages/adminPage.jsp - Page is not valid
+11:41:08.113 [http-apr-8080-exec-18] INFO  CheckAuthFilter:35 - /jsp/adminPages/adminPage.jsp - Page is not valid
+11:41:36.241 [http-apr-8080-exec-22] INFO  CheckAuthFilter:35 - /jsp/clientPages/handler - Page is not valid
+11:41:40.402 [http-apr-8080-exec-23] INFO  CheckAuthFilter:35 - /jsp/clientPages/handler - Page is not valid
+11:42:01.692 [http-apr-8080-exec-3] INFO  CheckAuthFilter:35 - /jsp/adminPages/handler - Page is not valid
+11:42:06.889 [http-apr-8080-exec-4] INFO  CheckAuthFilter:35 - /jsp/clientPages/handler - Page is not valid
+11:42:32.732 [http-apr-8080-exec-12] INFO  CheckAuthFilter:35 - /jsp/clientPages/handler - Page is not valid
+11:42:35.997 [http-apr-8080-exec-13] INFO  CheckAuthFilter:35 - /jsp/adminPages/handler - Page is not valid
+11:54:13.681 [http-apr-8080-exec-2] INFO  CheckAuthFilter:34 - //jsp/index.jsp - Page is not valid
+11:54:13.757 [http-apr-8080-exec-4] INFO  CheckAuthFilter:34 - //jsp/index.jsp - Page is not valid
+11:54:15.228 [http-apr-8080-exec-6] INFO  CheckAuthFilter:34 - //jsp/index.jsp - Page is not valid
+12:14:32.480 [http-apr-8080-exec-8] INFO  CheckAuthFilter:41 - /jsp/clientPages/personalPage.jsp - Guest has no access to page /jsp/clientPages/personalPage.jsp
+12:30:50.167 [http-apr-8080-exec-9] INFO  CheckAuthFilter:42 - You has no access to page /jsp/makeOrder/carGroupChoice.jsp. You Have not entered previous data
+12:30:50.179 [http-apr-8080-exec-9] INFO  CheckAuthFilter:48 - You has no access to page /jsp/makeOrder/placeChoice.jsp. You Have not entered previous data
+12:30:50.179 [http-apr-8080-exec-9] INFO  CheckAuthFilter:54 - You has no access to page /jsp/makeOrder/dateChoice.jsp. You Have not entered previous data
+12:31:31.496 [http-apr-8080-exec-14] INFO  CheckAuthFilter:42 - You has no access to page /jsp/makeOrder/carGroupChoice.jsp. You Have not entered previous data
+12:31:31.496 [http-apr-8080-exec-14] INFO  CheckAuthFilter:48 - You has no access to page /jsp/makeOrder/placeChoice.jsp. You Have not entered previous data
+13:03:35.470 [http-apr-8080-exec-13] INFO  CheckAuthFilter:60 - You has no access to page /jsp/adminPages/changeOrder.jsp. You Have not entered previous data
+13:03:35.474 [http-apr-8080-exec-13] INFO  CheckAuthFilter:69 - You has no access to page /jsp/adminPages/orders.jsp. You Have not entered previous data
+13:24:25.329 [http-apr-8080-exec-12] INFO  CheckAuthFilter:42 - You have no access to page /jsp/adminPages/adminPage.jsp. You have not entered previous data

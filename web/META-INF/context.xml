@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/CarRental">
+    <Resource name="jdbc/CarRental"
+              auth="Container"
+              type="javax.sql.DataSource"
+              maxActive="1000"
+              maxIdle="30"
+              maxWait="10000"
+              username="root"
+              password="pass"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://127.0.0.1/CarRental?UseUnicode=true&amp;characterEncoding=utf8"
+              URIEncoding="UTF-8"/>
+</Context>

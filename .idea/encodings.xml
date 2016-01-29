@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/commands" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/controllers" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/filter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/property" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/tag" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/META-INF" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/lib" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/WEB-INF/tld" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/css/main.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/image/ECMR.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/image/EDMR.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/image/EWMR.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/image/main.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/jsp/adminPages" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/jsp/clientPages" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/jsp/index.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/jsp/layout" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/jsp/login.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/jsp/makeOrder" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/jsp/makeOrder/carGroupChoice.jsp" charset="UTF-8" />
+  </component>
+</project>

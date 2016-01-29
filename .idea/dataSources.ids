@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - carrental@localhost" uuid="27ee00af-3a72-451b-af8a-ec305e356fda">
+    <database-info product="MySQL" version="5.7.10-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="carrental"/>
+    <table name="admin" schema="" catalog="carrental" type="TABLE">
+      <column name="id" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="admin_ibfk_1" columns="id" ref-table="client" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="car" schema="" catalog="carrental" type="TABLE">
+      <column name="id" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="modelEN" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="modelUK" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="carGroup" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="place" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="carState" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="car_ibfk_1" columns="carGroup" ref-table="cargroup" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="car_ibfk_2" columns="place" ref-table="place" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="car_ibfk_3" columns="carState" ref-table="carstate" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="rent_ibfk_2" table="rent" schema="" catalog="carrental" columns="car"/>
+    </table>
+    <table name="cargroup" schema="" catalog="carrental" type="TABLE">
+      <column name="id" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="capacity" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="carBody" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="transmission" sqlType="VARCHAR" precision="1" scale="0" nullable="false" jdbcType="12"/>
+      <column name="price" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="car_ibfk_1" table="car" schema="" catalog="carrental" columns="carGroup"/>
+      <exported-key name="carorder_ibfk_2" table="carorder" schema="" catalog="carrental" columns="carGroup"/>
+    </table>
+    <table name="carorder" schema="" catalog="carrental" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="client" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="carGroup" sqlType="VARCHAR" precision="10" scale="0" nullable="true" jdbcType="12"/>
+      <column name="startDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="endDate" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
+      <column name="startPlace" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="endPlace" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="status" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="comment" sqlType="VARCHAR" precision="100" scale="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="carorder_ibfk_1" columns="client" ref-table="client" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="carorder_ibfk_2" columns="carGroup" ref-table="cargroup" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="carorder_ibfk_3" columns="status" ref-table="orderstatus" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="carorder_ibfk_4" columns="startPlace" ref-table="place" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="carorder_ibfk_5" columns="endPlace" ref-table="place" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="payment_ibfk_1" table="payment" schema="" catalog="carrental" columns="carOrder"/>
+      <exported-key name="rent_ibfk_1" table="rent" schema="" catalog="carrental" columns="carOrder"/>
+    </table>
+    <table name="carstate" schema="" catalog="carrental" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="stateEN" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="stateUK" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="car_ibfk_3" table="car" schema="" catalog="carrental" columns="carState"/>
+    </table>
+    <table name="client" schema="" catalog="carrental" type="TABLE">
+      <column name="id" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nameSurnameEN" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nameSurnameUK" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="mail" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="driverLicense" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="telephone" sqlType="VARCHAR" precision="15" scale="0" nullable="false" jdbcType="12"/>
+      <column name="password" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="admin_ibfk_1" table="admin" schema="" catalog="carrental" columns="id"/>
+      <exported-key name="carorder_ibfk_1" table="carorder" schema="" catalog="carrental" columns="client"/>
+    </table>
+    <table name="orderstatus" schema="" catalog="carrental" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="statusEN" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="statusUK" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="carorder_ibfk_3" table="carorder" schema="" catalog="carrental" columns="status"/>
+    </table>
+    <table name="payment" schema="" catalog="carrental" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="carOrder" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="price" sqlType="FLOAT" precision="12" scale="0" nullable="false" jdbcType="7"/>
+      <column name="name" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="paid" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="payment_ibfk_1" columns="carOrder" ref-table="carorder" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="payment_ibfk_2" columns="name" ref-table="paymentname" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="paymentname" schema="" catalog="carrental" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="nameEN" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nameUK" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="payment_ibfk_2" table="payment" schema="" catalog="carrental" columns="name"/>
+    </table>
+    <table name="place" schema="" catalog="carrental" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="cityEN" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="cityUK" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="addressEN" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <column name="addressUK" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="car_ibfk_2" table="car" schema="" catalog="carrental" columns="place"/>
+      <exported-key name="carorder_ibfk_4" table="carorder" schema="" catalog="carrental" columns="startPlace"/>
+      <exported-key name="carorder_ibfk_5" table="carorder" schema="" catalog="carrental" columns="endPlace"/>
+    </table>
+    <table name="rent" schema="" catalog="carrental" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="carOrder" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <column name="car" sqlType="VARCHAR" precision="10" scale="0" nullable="false" jdbcType="12"/>
+      <column name="status" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <foreign-key name="rent_ibfk_1" columns="carOrder" ref-table="carorder" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="rent_ibfk_2" columns="car" ref-table="car" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="rent_ibfk_3" columns="status" ref-table="rentstatus" ref-schema="" ref-catalog="carrental" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+    </table>
+    <table name="rentstatus" schema="" catalog="carrental" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="statusEN" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <column name="statusUK" sqlType="VARCHAR" precision="30" scale="0" nullable="false" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="rent_ibfk_3" table="rent" schema="" catalog="carrental" columns="status"/>
+    </table>
+  </data-source>
+</component>

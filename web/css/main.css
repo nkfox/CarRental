@@ -1,0 +1,144 @@
+
+body {
+    background-image: url(../image/main.jpg);
+    background-color: #c7b39b;
+ background : url(../image/main.jpg) no-repeat, linear-gradient(#c7b39b, #c7b39b);
+    background-position: 100% 0%;
+    background-size: 100% auto;
+}
+
+.b-head {
+    width: 100%;
+    overflow: hidden;
+}
+
+.b-menu {
+    overflow: hidden;
+    padding: 0 2px;
+    margin: 0;
+    float: left;
+}
+
+.b-menu__item {
+    float: left;
+    list-style-type: none;
+    /*margin-right:15px;*/
+    margin-right: 0px;
+}
+
+.b-menu__link {
+    -moz-transition-duration: 0.3s;
+    -moz-transition-property: background-color, color, border-color;
+    -moz-transition-timing-function: ease-in-out;
+    display: block;
+    line-height: 19px;
+    padding: 10px 10px;
+    color: #f4f3f1;
+    text-decoration: none;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+.b-menu__link:hover {
+    background-color: #EF4833;
+    border-color: #CF3813;
+    color: #FFFFFF;
+}
+
+.b-menu__languages {
+    padding: 0;
+    margin: 0;
+    float: right;
+    overflow: hidden;
+}
+
+.b-menu__languages-item {
+    list-style-type: none;
+    float: left;
+    line-height: 19px;
+    padding: 10px 0;
+    margin-left: 7px;
+}
+
+.b-menu__languages-link {
+    color: rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+    text-decoration: none;
+    background-image: none;
+    background-color: transparent;
+}
+
+.b-menu__languages-link:hover {
+    text-shadow: none;
+    color: #f4f3f1;
+}
+
+.b-body {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.sub_menu {
+    width: 170px;
+    float: left;
+    border-bottom: 1px solid #b3b6bf;
+    margin-bottom: 30px;
+}
+
+.ssub_menu, .hssub_menu {
+    width: 170px;
+    float: left;
+    background-color: #e8e8e8;
+}
+
+.sub_menu .sm_item ul {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.sub_menu .sm_item ul li {
+    display: block;
+    border-top: 1px solid #b3b6bf;
+}
+
+.sub_menu ul li a {
+    display: block;
+    text-decoration: none;
+    color: #666666;
+    width: 170px;
+    height: 22px;
+    font-size: 12px;
+    padding-top: 8px;
+    padding-bottom: 0px;
+    padding-left: 2px;
+}
+
+.sub_menu .sm_item ul li:hover {
+    background-color: #d8ddea;
+}
+
+.hssub_menu .sm_item ul li a {
+    width: 150px;
+
+    padding: 3px;
+}
+
+.hssub_menu ul li a {
+    height: auto;
+    width: 150px;
+    padding: 8px 3px 8px 3px;
+}
+
+.ssub_menu .sm_item ul li a {
+    width: 150px;
+}
+
+.body-text {
+    color: #FFFFFF;
+}
+
+.text{
+    color: #FFFFFF;
+}
