@@ -89,8 +89,7 @@ public class PaymentDAO {
         String nameEN = rs.getString("nameEN");
         String nameUK = rs.getString("nameUK");
 
-        PaymentName paymentName = new PaymentName(id, nameEN, nameUK);
-        return paymentName;
+        return new PaymentName(id, nameEN, nameUK);
     }
 
     /**
@@ -116,9 +115,7 @@ public class PaymentDAO {
         String nameEN = rs.getString("nameEN");
         String nameUK = rs.getString("nameUK");
 
-        PaymentName paymentName = new PaymentName(id, nameEN, nameUK);
-
-        return paymentName;
+        return new PaymentName(id, nameEN, nameUK);
     }
 
     /**
@@ -132,7 +129,7 @@ public class PaymentDAO {
         PreparedStatement ps = con.prepareStatement(resourceBundle.getString("allPaymentNames"));
         ResultSet rs = ps.executeQuery();
 
-        List<PaymentName> paymentNames = new ArrayList();
+        List<PaymentName> paymentNames = new ArrayList<>();
         while (rs.next()) {
             int id = rs.getInt("id");
             String nameEN = rs.getString("nameEN");
@@ -153,7 +150,7 @@ public class PaymentDAO {
      * @see Payment
      */
     public List<Payment> getPaymentsByClient(Client client) throws SQLException {
-        List<Payment> payments = new ArrayList();
+        List<Payment> payments = new ArrayList<>();
         Connection con = ds.getConnection();
         PreparedStatement ps = con.prepareStatement(resourceBundle.getString("paymentsByClientId"));
         ps.setString(1, client.getId());
@@ -164,7 +161,7 @@ public class PaymentDAO {
             int carOrder = rs.getInt("carOrder");
             double price = rs.getDouble("price");
             int nameId = rs.getInt("name");
-            boolean paid = (rs.getInt("paid")) != 0 ? true : false;
+            boolean paid = (rs.getInt("paid")) != 0;
             PaymentName name = getNameById(con, nameId);
 
             Payment payment = new Payment(id, carOrder, price, name, paid);
@@ -182,7 +179,7 @@ public class PaymentDAO {
      * @see Payment
      */
     public List<Payment> getPaymentsByIdOrOrder(int searchId) throws SQLException {
-        List<Payment> payments = new ArrayList();
+        List<Payment> payments = new ArrayList<>();
         Connection con = ds.getConnection();
         PreparedStatement ps = con.prepareStatement(resourceBundle.getString("paymentsByIdOrOrder"));
         ps.setInt(1, searchId);
@@ -194,7 +191,7 @@ public class PaymentDAO {
             int carOrder = rs.getInt("carOrder");
             double price = rs.getDouble("price");
             int nameId = rs.getInt("name");
-            boolean paid = (rs.getInt("paid")) != 0 ? true : false;
+            boolean paid = (rs.getInt("paid")) != 0;
             PaymentName name = getNameById(con, nameId);
 
             Payment payment = new Payment(id, carOrder, price, name, paid);
@@ -233,7 +230,7 @@ public class PaymentDAO {
      * @see Payment
      */
     public List<Payment> getAllPayments() throws SQLException {
-        List<Payment> payments = new ArrayList();
+        List<Payment> payments = new ArrayList<>();
         Connection con = ds.getConnection();
         PreparedStatement ps = con.prepareStatement(resourceBundle.getString("allPayments"));
         ResultSet rs = ps.executeQuery();
@@ -243,7 +240,7 @@ public class PaymentDAO {
             int carOrder = rs.getInt("carOrder");
             double price = rs.getDouble("price");
             int nameId = rs.getInt("name");
-            boolean paid = (rs.getInt("paid")) != 0 ? true : false;
+            boolean paid = (rs.getInt("paid")) != 0;
             PaymentName name = getNameById(con, nameId);
 
             Payment payment = new Payment(id, carOrder, price, name, paid);
@@ -262,7 +259,7 @@ public class PaymentDAO {
      * @see CarOrder
      */
     public List<Payment> getPaymentsByOrderId(int order) throws SQLException {
-        List<Payment> payments = new ArrayList();
+        List<Payment> payments = new ArrayList<>();
         Connection con = ds.getConnection();
         PreparedStatement ps = con.prepareStatement(resourceBundle.getString("paymentsByOrderId"));
         ps.setInt(1, order);
@@ -273,7 +270,7 @@ public class PaymentDAO {
             double price = rs.getDouble("price");
             int nameId = rs.getInt("name");
             PaymentName name = getNameById(con, nameId);
-            boolean paid = (rs.getInt("paid")) != 0 ? true : false;
+            boolean paid = (rs.getInt("paid")) != 0;
 
             Payment payment = new Payment(id, order, price, name, paid);
             payments.add(payment);

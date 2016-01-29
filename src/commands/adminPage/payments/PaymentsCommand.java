@@ -28,7 +28,7 @@ public class PaymentsCommand implements Command {
         String path = "/jsp/adminPages/payments.jsp";
         session.setAttribute("path", path);
 
-        List<Payment> payments = new ArrayList();
+        List<Payment> payments = new ArrayList<>();
 
         DAOFactory factory = DAOFactory.getInstance();
         PaymentDAO paymentDao = factory.getPaymentDAO();

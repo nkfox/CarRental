@@ -38,7 +38,7 @@ public class PlaceDAO {
      * @see Place
      */
     public List<Place> getAll() throws SQLException {
-        List<Place> places = new ArrayList();
+        List<Place> places = new ArrayList<>();
         Connection con = ds.getConnection();
         PreparedStatement ps = con.prepareStatement(resourceBundle.getString("allPlaces"));
         ResultSet rs = ps.executeQuery();

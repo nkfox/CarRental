@@ -105,13 +105,11 @@ public class CarOrderDAO {
     }
 
     private OrderStatus getInitialStatus(Connection con) throws SQLException {
-        OrderStatus status = getStatusByName(con, "Registered");
-        return status;
+        return getStatusByName(con, "Registered");
     }
 
     private OrderStatus getCanceledStatus(Connection con) throws SQLException {
-        OrderStatus status = getStatusByName(con, "Canceled");
-        return status;
+        return getStatusByName(con, "Canceled");
     }
 
     private OrderStatus getStatusByName(Connection con, String name) throws SQLException {
@@ -124,9 +122,7 @@ public class CarOrderDAO {
         String statusEN = rs.getString("statusEN");
         String statusUK = rs.getString("statusUK");
 
-        OrderStatus status = new OrderStatus(id, statusEN, statusUK);
-
-        return status;
+        return new OrderStatus(id, statusEN, statusUK);
     }
 
     private OrderStatus getStatusById(int id, Connection con) throws SQLException {
@@ -138,9 +134,7 @@ public class CarOrderDAO {
         String statusEN = rs.getString("statusEN");
         String statusUK = rs.getString("statusUK");
 
-        OrderStatus status = new OrderStatus(id, statusEN, statusUK);
-
-        return status;
+        return new OrderStatus(id, statusEN, statusUK);
     }
 
     /**
@@ -154,7 +148,7 @@ public class CarOrderDAO {
         PreparedStatement ps = con.prepareStatement(resourceBundle.getString("allStatuses"));
         ResultSet rs = ps.executeQuery();
 
-        List<OrderStatus> statuses = new ArrayList();
+        List<OrderStatus> statuses = new ArrayList<>();
         while (rs.next()) {
             int id = rs.getInt("id");
             String statusEN = rs.getString("statusEN");
@@ -195,7 +189,7 @@ public class CarOrderDAO {
      * @see CarOrder
      */
     public List<CarOrder> getOrdersByClient(Client client) throws SQLException {
-        List<CarOrder> orders = new ArrayList();
+        List<CarOrder> orders = new ArrayList<>();
         Connection con = ds.getConnection();
         PreparedStatement ps = con.prepareStatement(resourceBundle.getString("ordersByClientId"));
         ps.setString(1, client.getId());
@@ -276,7 +270,7 @@ public class CarOrderDAO {
      * @see CarOrder
      */
     public List<CarOrder> getAllOrders() throws SQLException {
-        List<CarOrder> orders = new ArrayList();
+        List<CarOrder> orders = new ArrayList<>();
         Connection con = ds.getConnection();
         PreparedStatement ps = con.prepareStatement(resourceBundle.getString("allOrders"));
         ResultSet rs = ps.executeQuery();

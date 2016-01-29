@@ -42,7 +42,7 @@ public class PayForRepairCommand implements Command {
 
         Payment payment = new Payment(orderId,price,paymentName);
 
-        List<Payment> payments = new ArrayList();
+        List<Payment> payments = new ArrayList<>();
         try {
             paymentDao.addPayment(payment);
             payments = paymentDao.getPaymentsByOrderId(orderId);

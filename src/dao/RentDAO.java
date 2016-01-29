@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
+
 /**
  * This class process with queries to Rent table in CarRental database.
  * Created by Nataliia Kozoriz on 24.01.2016.
@@ -66,9 +67,7 @@ public class RentDAO {
         String statusEN = rs.getString("statusEN");
         String statusUK = rs.getString("statusUK");
 
-        RentStatus status = new RentStatus(id, statusEN, statusUK);
-
-        return status;
+        return new RentStatus(id, statusEN, statusUK);
     }
 
     /**
@@ -82,7 +81,7 @@ public class RentDAO {
         PreparedStatement ps = con.prepareStatement(resourceBundle.getString("allRentStatuses"));
         ResultSet rs = ps.executeQuery();
 
-        List<RentStatus> statuses = new ArrayList();
+        List<RentStatus> statuses = new ArrayList<>();
         while (rs.next()) {
             int id = rs.getInt("id");
             String statusEN = rs.getString("statusEN");
@@ -103,7 +102,7 @@ public class RentDAO {
      * @see Client
      */
     public List<Rent> getRentsByClient(Client client) throws SQLException {
-        List<Rent> rents = new ArrayList();
+        List<Rent> rents = new ArrayList<>();
         Connection con = ds.getConnection();
         PreparedStatement ps = con.prepareStatement(resourceBundle.getString("rentsByClientId"));
         ps.setString(1, client.getId());
@@ -172,9 +171,7 @@ public class RentDAO {
         String statusEN = rs.getString("statusEN");
         String statusUK = rs.getString("statusUK");
 
-        OrderStatus status = new OrderStatus(id, statusEN, statusUK);
-
-        return status;
+        return new OrderStatus(id, statusEN, statusUK);
     }
 
     /**

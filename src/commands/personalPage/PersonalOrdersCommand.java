@@ -27,7 +27,7 @@ public class PersonalOrdersCommand implements Command {
         HttpSession session = request.getSession(true);
         session.setAttribute("path", "/jsp/clientPages/personalOrders.jsp");
 
-        List<CarOrder> orders = new ArrayList();
+        List<CarOrder> orders = new ArrayList<>();
         Client client = (Client) session.getAttribute("client");
 
         DAOFactory factory = DAOFactory.getInstance();

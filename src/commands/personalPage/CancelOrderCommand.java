@@ -37,7 +37,7 @@ public class CancelOrderCommand implements Command {
             logger.error("DBError", ex);
         }
 
-        List<CarOrder> orders = new ArrayList();
+        List<CarOrder> orders = new ArrayList<>();
         Client client = (Client) session.getAttribute("client");
 
         try {

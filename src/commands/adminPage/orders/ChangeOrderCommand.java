@@ -46,37 +46,40 @@ public class ChangeOrderCommand implements Command {
             logger.error("DBError", ex);
         }
 
-        List<Payment> payments = new ArrayList();
-        List<PaymentName> paymentNames = new ArrayList();
-        PaymentDAO paymentDao = factory.getPaymentDAO();
-        try {
-            payments = paymentDao.getPaymentsByOrderId(order.getId());
-            paymentNames = paymentDao.getAllNames();
+        if (order!=null) {
+            List<Payment> payments = new ArrayList<>();
+            List<PaymentName> paymentNames = new ArrayList<>();
+            PaymentDAO paymentDao = factory.getPaymentDAO();
+            try {
+                payments = paymentDao.getPaymentsByOrderId(order.getId());
+                paymentNames = paymentDao.getAllNames();
 
-        } catch (SQLException | NullPointerException ex) {
-            logger.error("DBError", ex);
+            } catch (SQLException | NullPointerException ex) {
+                logger.error("DBError", ex);
+            }
+
+            Rent rent = null;
+            List<RentStatus> rentStatuses = new ArrayList<>();
+            RentDAO rentDao = factory.getRentDAO();
+            try {
+                rent = rentDao.getRentByOrderId(order.getId());
+                rentStatuses = rentDao.getAllStatuses();
+            } catch (SQLException | NullPointerException ex) {
+                logger.error("DBError", ex);
+            }
+
+            session.setAttribute("statuses", statuses);
+            session.setAttribute("orderId", orderId);
+            session.setAttribute("order", order);
+            session.setAttribute("payments", payments);
+            session.setAttribute("paymentNames", paymentNames);
+            session.setAttribute("rent", rent);
+            session.setAttribute("rentStatuses", rentStatuses);
+
+            return "/jsp/adminPages/changeOrder.jsp";
         }
-
-        Rent rent = null;
-        List<RentStatus> rentStatuses = new ArrayList();
-        RentDAO rentDao = factory.getRentDAO();
-        try {
-            rent = rentDao.getRentByOrderId(order.getId());
-            rentStatuses = rentDao.getAllStatuses();
-        } catch (SQLException | NullPointerException ex) {
-            logger.error("DBError", ex);
+        else{
+            return "/jsp/adminPages/orders.jsp";
         }
-
-        session.setAttribute("statuses", statuses);
-        session.setAttribute("orderId", orderId);
-        session.setAttribute("order", order);
-        session.setAttribute("payments", payments);
-        session.setAttribute("paymentNames", paymentNames);
-        session.setAttribute("rent", rent);
-        session.setAttribute("rentStatuses", rentStatuses);
-
-        String path = "/jsp/adminPages/changeOrder.jsp";
-        session.setAttribute("path", path);
-        return path;
     }
 }

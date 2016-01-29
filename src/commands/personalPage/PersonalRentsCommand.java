@@ -27,7 +27,7 @@ public class PersonalRentsCommand implements Command {
         HttpSession session = request.getSession(true);
         session.setAttribute("path", "/jsp/clientPages/personalRents.jsp");
 
-        List<Rent> rents = new ArrayList();
+        List<Rent> rents = new ArrayList<>();
         Client client = (Client) session.getAttribute("client");
 
         DAOFactory factory = DAOFactory.getInstance();

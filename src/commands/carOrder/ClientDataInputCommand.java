@@ -32,14 +32,6 @@ public class ClientDataInputCommand implements Command {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-        response.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html; charset=UTF-8");
-
-        try {
-            request.setCharacterEncoding("UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
 
         String nameSurname = request.getParameter("nameSurname");
         String id = request.getParameter("id");

@@ -40,7 +40,7 @@ public class CarGroupDAO {
      * @see CarGroup
      */
     public List<CarGroup> getAll() throws SQLException {
-        List<CarGroup> carGroups = new ArrayList();
+        List<CarGroup> carGroups = new ArrayList<>();
         Connection con = ds.getConnection();
         PreparedStatement ps = con.prepareStatement(resourceBundle.getString("allCarGroups"));
         ResultSet rs = ps.executeQuery();

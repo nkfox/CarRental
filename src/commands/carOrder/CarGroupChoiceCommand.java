@@ -24,14 +24,6 @@ public class CarGroupChoiceCommand implements Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession(true);
 
-        try {
-            request.setCharacterEncoding("UTF-8");
-        } catch (UnsupportedEncodingException e) {
-            logger.error("UnsupportedEncoding", e);
-        }
-        response.setCharacterEncoding("UTF-8");
-        response.setContentType("text/html; charset=UTF-8");
-
         String selected = request.getParameter("carGroup");
 
         CarGroup selectedCarGroup = new CarGroup();

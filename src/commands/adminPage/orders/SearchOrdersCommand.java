@@ -40,7 +40,7 @@ public class SearchOrdersCommand implements Command {
             logger.error("DBError", ex);
         }
 
-        List<CarOrder> orders = new ArrayList();
+        List<CarOrder> orders = new ArrayList<>();
 
 
         CarOrderDAO carOrderDao = factory.getCarOrderDAO();

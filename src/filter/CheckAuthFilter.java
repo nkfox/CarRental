@@ -109,21 +109,6 @@ public class CheckAuthFilter implements Filter {
         return path;
     }
 
-    private boolean isPublicPage(String page) {
-        String[] paths = {"/jsp/index.jsp",
-                "/jsp/login.jsp",
-                "/jsp/makeOrder/dateChoice.jsp",
-                "/jsp/makeOrder/placeChoice.jsp",
-                "/jsp/makeOrder/carGroupChoice.jsp",
-                "/jsp/makeOrder/clientDataInput.jsp"};
-        for (String path : paths) {
-            if (path.equals(page)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     private boolean isClientPage(String page) {
         String[] paths = {"/jsp/clientPages/personalPage.jsp",
                 "/jsp/clientPages/personalData.jsp",
